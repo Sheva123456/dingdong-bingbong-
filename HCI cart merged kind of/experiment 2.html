@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs with URL Parameters</title>
+  <style>
+    /* Tab button styles */
+    .tablink {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ddd;
+      border: none;
+      cursor: pointer;
+      text-align: center;
+    }
+    .tablink.active {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    /* Tab content styles */
+    .tabcontent {
+      display: none;
+      padding: 20px;
+      border: 1px solid #ddd;
+    }
+    .tabcontent.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <!-- Tab Buttons -->
+  <button class="tablink" data-tab="Tab1">Tab 1</button>
+  <button class="tablink" data-tab="Tab2">Tab 2</button>
+  <button class="tablink" data-tab="Tab3">Tab 3</button>
+
+  <!-- Tab Contents -->
+  <div id="Tab1" class="tabcontent">
+    <h3>Tab 1</h3>
+    <p>Content for Tab 1.</p>
+  </div>
+  <div id="Tab2" class="tabcontent">
+    <h3>Tab 2</h3>
+    <p>Content for Tab 2.</p>
+  </div>
+  <div id="Tab3" class="tabcontent">
+    <h3>Tab 3</h3>
+    <p>Content for Tab 3.</p>
+  </div>
+
+  <script>
+    // Function to switch tabs
+    function openTab(tabId) {
+      // Remove 'active' class from all tablinks and tabcontent
+      document.querySelectorAll('.tablink').forEach(button => button.classList.remove('active'));
+      document.querySelectorAll('.tabcontent').forEach(content => content.classList.remove('active'));
+
+      // Add 'active' class to the clicked tab button and content
+      document.querySelector(`.tablink[data-tab="${tabId}"]`).classList.add('active');
+      document.getElementById(tabId).classList.add('active');
+    }
+
+    // Function to get URL parameter
+    function getUrlParam(param) {
+      const params = new URLSearchParams(window.location.search);
+      return params.get(param);
+    }
+
+    // Event listeners for tab buttons
+    document.querySelectorAll('.tablink').forEach(button => {
+      button.addEventListener('click', function() {
+        const tabId = this.getAttribute('data-tab');
+        openTab(tabId);
+
+        // Update the URL without reloading the page
+        history.pushState(null, '', `?tab=${tabId}`);
+      });
+    });
+
+    // Open the tab specified in the URL or default to Tab1
+    const initialTab = getUrlParam('tab') || 'Tab1';
+    openTab(initialTab);
+  </script>
+</body>
+</html>

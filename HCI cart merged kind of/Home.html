@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple E-Commerce</title>
+  <link rel="stylesheet" href="CSS\style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=account_circle,grocery,location_on,notifications,shopping_cart,store "rel="stylesheet"  />
+
+ 
+</head>
+<body style="margin: 0px; background: rgb(255, 250, 244)">
+
+  <!-- supposed to be the navbar -->
+<div class="ultimate_nav">
+  <header>
+
+    <div class = "element_container">
+
+
+        <div class = "logo">      
+          <a href='Home.html'>
+            <img class="logo"  src="https://cdn.animaapp.com/projects/673dab3263b5c67177c683c2/releases/673dafd5ad868c6a88d1d3ba/img/logo.svg" >  
+            <span class="link logo"></span>
+          </a>
+        </div>
+      
+        <div class = "location_icon material-symbols-outlined icon">
+          <span class="material-symbols-outlined icon">
+            location_on
+          </span>
+        </div>  
+        <div class="Search_bar" >
+          <input 
+          type="text" 
+          id="search-bar" 
+          placeholder="What are you looking for?" 
+          oninput="showSuggestions()"
+        >
+        <div id="suggestions" class="suggestions hidden"></div>
+              <img class="Search_ICON"  src="https://cdn.animaapp.com/projects/673dab3263b5c67177c683c2/releases/673dafd5ad868c6a88d1d3ba/img/icon.svg" >
+            
+        </div>
+
+        <div class = "shopping_icons_box material-symbols-outlined icon">        
+          <a href='Products.html'>
+            <span class="material-symbols-outlined icon">
+              store
+            </span>
+          </a>
+          <a href='cart.html'>
+            <span class="material-symbols-outlined icon">
+              shopping_cart
+
+            </span>
+          </a>
+            <span class="material-symbols-outlined icon">
+              notifications
+            </span>
+          
+          <a href="account.html" id="accounticon"><span class="material-symbols-outlined icon" >
+          account_circle
+          </span></a>
+          <button  class="btn"  id="sign-in">Sign In</button> 
+        </div>
+    </div>
+
+  </header>
+  <div id="white-guys" class="dropdown-toggle">
+    
+    <div class="barcontainer">
+      <div class="line-eco-meter"></div>
+      <div class="line-waste-meter"></div>
+    </div>
+    
+  </div>
+  <div id="dropdown-content" class="dropdown-content">
+    <div class="stats">
+      <h2> Total eco-points: <span id="total-eco-points"></span></h2>
+      <div class="bar2container">
+        <div class="small-eco"></div>
+      </div>
+      <h2> Total waste-points: <span id="total-waste-points"></span></h2>
+      <div class="bar3container">
+        <div class="small-waste"></div>
+      </div>
+      <p id="help">More information</p>
+      
+    </div>
+    
+  </div>
+  <!-- for adding the waste index later -->
+  
+
+</div>
+
+<!-- billboard carousel -->
+<div class = "headline">
+  <section class="container">
+    <div class="slider-wrapper">
+      <div class="slider">
+        <img id="slide-1" src="https://i.ibb.co.com/NsNJnj4/Artboard-1-100.jpg" />
+        <img id="slide-2" src="https://i.ibb.co.com/mJz9TTH/no-good.png" />
+        <img id="slide-3" src="https://i.ibb.co.com/mJz9TTH/no-good.png"  />
+      </div>
+      
+    </div>
+    <div class="slider-nav">
+        <a href="#slide-1"></a>
+        <a href="#slide-2"></a>
+        <a href="#slide-3"></a>
+    </div>
+  </section>  
+</div>
+
+<div class = "marquee">
+<marquee behavior="" direction=""></marquee>
+</div>
+
+<div class = "title_categories">
+  <h3>All Categories</h3>
+</div>
+
+<!-- CATEGORIES SECTION -->
+<section class="categorieS">
+  <a href="Products.html?tab=Fruits">
+    <div class="category" >  <!-- Fruits -->
+        <h3>Fruits</h3>
+        
+        <img src="https://i.ibb.co.com/3dsytrC/fruits-2x.png" alt="Product 1">
+    </div>
+  </a>  
+  <a href="Products.html?tab=Vegetables">
+    <div class="category" >  <!-- Vegetables -->
+      <h3>Vegetables</h3>
+      <img src="https://i.ibb.co.com/b3xsHs8/vegetables-2x.png"alt="Product 2">    
+    </div>
+  </a>
+  <a href="Products.html?tab=Least Waste">
+  <div class="category" > <!-- Least waste -->
+    <h3>Least Waste</h3>
+    <img src="https://i.ibb.co.com/GHyLpGJ/less-waste-2x.png" alt="Product 3">    
+  </div>
+  </a>
+  <div class="category" > <!-- Meat -->
+    <h3>Meat</h3>
+    <img src="https://i.ibb.co.com/z2qgqLz/meat-2x.png" alt="Product 4">    
+  </div>
+<!----------------------------------------------------------------------------------->
+  <div class="category" > <!-- Snacks -->
+    <h3>Snacks</h3>
+    <img src="https://i.ibb.co.com/fV3wnBp/snacks-2x.png" alt="Product 4">    
+  </div>
+  <div class="category" > <!-- dairy -->
+    <h3>Dairy</h3>
+    <img src="https://i.ibb.co.com/Pjvgcww/dairy-2x.png" alt="Product 4">    
+  </div>
+  <div class="category" > <!-- Bakery -->
+    <h3>Bakery</h3>
+    <img src="https://i.ibb.co.com/SnFpJ5j/bakery-2x.png" alt="Product 4">    
+  </div>
+  <div class="category" > <!-- Frozen -->
+    <h3>Frozen</h3>
+    <img src="https://i.ibb.co.com/FVM5nJ6/frozen-2x.png" alt="Product 4">    
+  </div>
+<!----------------------------------------------------------------------------------->  
+  <div class="category" > <!-- Seafood -->
+    <h3>Seafood</h3>
+    <img src="https://i.ibb.co.com/S3LrFm9/seafood-2x.png" alt="Product 4">    
+  </div>
+  <div class="category" > <!-- Canned -->
+    <h3>Spices</h3>
+    <img src="https://i.ibb.co.com/ky3khjZ/spices-2x.png" alt="Product 4">    
+  </div>
+  <div class="category" > <!-- Self Care -->
+    <h3>Self Care</h3>
+    <img src="https://i.ibb.co.com/PjpFmgP/self-care-2x.png" alt="Product 4">    
+  </div>
+  <div class="category" > <!-- Cleaning -->
+    <h3>Cleaning</h3>
+    <img src="https://i.ibb.co.com/fGsLgWV/house-cleaning-2x.png" alt="Product 4">    
+  </div>
+<!----------------------------------------------------------------------------------->  
+  <div class="category" > <!-- Seafood -->
+    <h3>Seafood</h3>
+    <img src="https://i.ibb.co.com/S3LrFm9/seafood-2x.png" alt="Product 4">    
+  </div>
+  <div class="category" > <!-- Canned -->
+    <h3>Spices</h3>
+    <img src="https://i.ibb.co.com/ky3khjZ/spices-2x.png" alt="Product 4">    
+  </div>
+  <div class="category" > <!-- Self Care -->
+    <h3>Self Care</h3>
+    <img src="https://i.ibb.co.com/PjpFmgP/self-care-2x.png" alt="Product 4">    
+  </div>
+  <div class="category" > <!-- Cleaning -->
+    <h3>Cleaning</h3>
+    <img src="https://i.ibb.co.com/fGsLgWV/house-cleaning-2x.png" alt="Product 4">    
+  </div>
+</section>
+
+<!-------- Lifestyle News --------->
+
+<div class = "title_News">
+  <h3>Sustainable Lifestyle</h3>
+</div>
+
+<footer>
+
+</footer>
+
+<button id="Time-Decay">Simulate Time Decay </button>
+<script src="Script/front_page.js"></script>
+<script type="module" src="fire-base-init.js">
+</script>
+</body>
+</html>

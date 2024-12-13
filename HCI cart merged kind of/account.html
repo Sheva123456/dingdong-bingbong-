@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account page</title>
+  <link rel="stylesheet" href="CSS\style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=account_circle,notifications,shopping_cart " />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=account_circle,grocery,location_on,notifications,shopping_cart,store "rel="stylesheet"  />
+
+
+</head>
+<body style="margin: 0px; background: rgb(255, 250, 244)">
+
+  <!-- supposed to be the navbar -->
+<div class="ultimate_nav">
+  <header>
+
+    <div class = "element_container">
+        <div class = "logo">      
+          <a href='Home.html'>
+            <img class="logo"  src="https://cdn.animaapp.com/projects/673dab3263b5c67177c683c2/releases/673dafd5ad868c6a88d1d3ba/img/logo.svg" >  
+            <span class="link logo"></span>
+          </a>
+        </div>
+      
+        <div class = "location_icon material-symbols-outlined icon">
+          <span class="material-symbols-outlined icon">
+            location_on
+          </span>
+        </div>  
+
+        <div class="Search_bar" >
+          <input 
+          type="text" 
+          id="search-bar" 
+          placeholder="What are you looking for?" 
+          oninput="showSuggestions()"
+        >
+        <div id="suggestions" class="suggestions hidden"></div>
+              <img class="Search_ICON"  src="https://cdn.animaapp.com/projects/673dab3263b5c67177c683c2/releases/673dafd5ad868c6a88d1d3ba/img/icon.svg" >
+            
+        </div>
+        <div class = "shopping_icons_box">
+          <a href='cart.html'><span class="material-symbols-outlined">shopping_cart</span></a>
+          <span class="material-symbols-outlined">notifications</span>
+          <a href="account.html"><span class="material-symbols-outlined" >account_circle</span></a>
+        </div>
+    </div>
+
+  </header>
+  <div class="white-guys">
+    <div class="barcontainer">
+      <div class="line-eco-meter"></div>
+      <div class="line-waste-meter"></div>
+    </div>
+  </div>
+  <!-- for adding the waste index later -->
+  
+
+</div>
+<div id="profile">
+  <div class="profile-info">
+    <img src="Images/profile-img.png" id="profile-pic">
+    <h2 id="full-name">John Doe</h2>
+  </div>
+  <div class="divider"></div>
+  
+  
+  <div class="stats">
+    <h1>Your stats:</h1>
+    <p> Total eco-points: <span id="total-eco-points">120</span></p>
+    <div class="bar2container">
+      <div class="small-eco"></div>
+    </div>
+    <p> Total waste-points: <span id="total-waste-points">35</span></p>
+    <div class="bar3container">
+      <div class="small-waste"></div>
+    </div>
+    <p id="eligible discount"></p>
+    <button type="button" id="signout">Sign Out</button>
+  </div>
+  
+</div> 
+</div>
+
+
+<script src="Script/account.js"></script>
+</body>
+</html>
